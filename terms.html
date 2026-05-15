@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Emiti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #1a6b3c;
+      --green-light: #22854c;
+      --green-muted: #e8f4ee;
+      --white: #ffffff;
+      --gray-light: #f5f5f5;
+      --gray-mid: #e0e0e0;
+      --gray-text: #6b7280;
+      --dark: #111827;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-mid);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .logo img { height: 36px; width: auto; }
+
+    .logo-text {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--green);
+      letter-spacing: -0.5px;
+    }
+
+    nav { display: flex; align-items: center; gap: 1.5rem; }
+
+    nav a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--green); }
+
+    .page-hero {
+      background: var(--gray-light);
+      padding: 3.5rem 1.5rem;
+      border-bottom: 1px solid var(--gray-mid);
+    }
+
+    .page-hero-inner { max-width: 800px; margin: 0 auto; }
+
+    .page-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .page-hero p {
+      font-size: 0.85rem;
+      color: var(--gray-text);
+      margin-top: 0.5rem;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .content h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 2.5rem 0 0.75rem;
+      color: var(--dark);
+    }
+
+    .content h2:first-child { margin-top: 0; }
+
+    .content p {
+      font-size: 0.95rem;
+      color: #374151;
+      margin-bottom: 0.75rem;
+    }
+
+    .content ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .content ul li {
+      font-size: 0.95rem;
+      color: #374151;
+      margin-bottom: 0.4rem;
+    }
+
+    .content a { color: var(--green); }
+
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.7);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+
+    .footer-logo {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--white); }
+
+    .footer-copy { font-size: 0.8rem; opacity: 0.5; }
+
+    @media (max-width: 640px) {
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="emiti-logo.png" alt="Emiti" onerror="this.style.display='none'" />
+      <span class="logo-text">Emiti</span>
+    </a>
+    <nav>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Terms of Service</h1>
+    <p>Última actualización: 14 de mayo de 2026</p>
+  </div>
+</div>
+
+<div class="content">
+  <h2>1. Aceptación de los términos</h2>
+  <p>Al descargar, instalar o utilizar la aplicación Emiti, usted acepta estar sujeto a estos Términos de Servicio. Si no está de acuerdo con alguno de estos términos, no utilice el servicio. Estos términos constituyen un acuerdo legal entre usted y Evolutio Media.</p>
+
+  <h2>2. Descripción del servicio</h2>
+  <p>Emiti es una aplicación móvil de facturación y cotización diseñada para trabajadores independientes y pequeñas empresas. El servicio permite crear, gestionar y compartir facturas, cotizaciones y recibos de pago, así como enviar recordatorios a clientes.</p>
+
+  <h2>3. Elegibilidad</h2>
+  <p>Para usar Emiti debe tener al menos 18 años de edad y tener capacidad legal para celebrar contratos. Al aceptar estos términos, declara y garantiza que cumple con estos requisitos.</p>
+
+  <h2>4. Cuenta de usuario</h2>
+  <p>Usted es responsable de:</p>
+  <ul>
+    <li>Mantener la confidencialidad de sus credenciales de acceso</li>
+    <li>Todas las actividades que ocurran bajo su cuenta</li>
+    <li>Notificarnos inmediatamente sobre cualquier uso no autorizado</li>
+    <li>Proporcionar información veraz y actualizada en su perfil</li>
+  </ul>
+
+  <h2>5. Planes y pagos</h2>
+  <p>Emiti ofrece un plan gratuito con funciones limitadas y un plan Pro de pago. Los cargos del plan Pro son de $9.95 USD por mes. El cobro se realiza de forma anticipada al inicio de cada período de facturación. No se realizan reembolsos por períodos parciales, salvo que lo exija la ley aplicable.</p>
+
+  <h2>6. Cancelación</h2>
+  <p>Puede cancelar su suscripción en cualquier momento desde la configuración de su cuenta. La cancelación tendrá efecto al final del período de facturación vigente. Tras la cancelación, su cuenta pasará al plan gratuito con las restricciones correspondientes.</p>
+
+  <h2>7. Uso aceptable</h2>
+  <p>Usted se compromete a no utilizar Emiti para:</p>
+  <ul>
+    <li>Actividades ilegales o fraudulentas</li>
+    <li>Emitir facturas o documentos falsos</li>
+    <li>Enviar comunicaciones no solicitadas (spam)</li>
+    <li>Intentar acceder a datos de otros usuarios</li>
+    <li>Interferir con la operación normal del servicio</li>
+  </ul>
+
+  <h2>8. Propiedad intelectual</h2>
+  <p>Emiti y todo su contenido, características y funcionalidades son propiedad de Evolutio Media y están protegidos por leyes de propiedad intelectual. No se concede ninguna licencia para usar el nombre, logotipo o marcas registradas de Emiti sin autorización expresa por escrito.</p>
+
+  <h2>9. Contenido del usuario</h2>
+  <p>Usted retiene la propiedad de los datos que ingresa en Emiti (clientes, facturas, servicios). Al utilizar el servicio, nos otorga una licencia limitada para procesar y almacenar dicho contenido con el único propósito de proveer el servicio.</p>
+
+  <h2>10. Limitación de responsabilidad</h2>
+  <p>En la máxima medida permitida por la ley, Evolutio Media no será responsable por daños indirectos, incidentales, especiales o consecuentes que surjan del uso o la imposibilidad de usar el servicio. Nuestra responsabilidad total no excederá el monto pagado por usted en los últimos 3 meses.</p>
+
+  <h2>11. Disponibilidad del servicio</h2>
+  <p>Nos esforzamos por mantener el servicio disponible en todo momento, pero no garantizamos disponibilidad ininterrumpida. Podemos realizar mantenimientos programados o no programados y no seremos responsables por interrupciones temporales del servicio.</p>
+
+  <h2>12. Modificaciones al servicio</h2>
+  <p>Nos reservamos el derecho de modificar, suspender o discontinuar el servicio (o cualquier parte de él) en cualquier momento, con o sin previo aviso. No seremos responsables ante usted ni ante terceros por cualquier modificación, suspensión o discontinuación del servicio.</p>
+
+  <h2>13. Cambios a los términos</h2>
+  <p>Podemos actualizar estos términos periódicamente. Le notificaremos sobre cambios materiales con al menos 15 días de anticipación a través de la app o por correo electrónico. El uso continuado del servicio tras la fecha efectiva de los cambios constituye su aceptación de los nuevos términos.</p>
+
+  <h2>14. Ley aplicable</h2>
+  <p>Estos términos se rigen por las leyes del Estado Libre Asociado de Puerto Rico y las leyes federales aplicables de los Estados Unidos, sin consideración a sus principios de conflicto de leyes.</p>
+
+  <h2>15. Contacto</h2>
+  <p>Para consultas sobre estos Términos de Servicio, comuníquese con nosotros en: <a href="mailto:evolutiomediapr@gmail.com">evolutiomediapr@gmail.com</a></p>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">emiti</div>
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:evolutiomediapr@gmail.com">evolutiomediapr@gmail.com</a>
+    </div>
+    <p class="footer-copy">© 2026 Emiti by Evolutio Media. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>
