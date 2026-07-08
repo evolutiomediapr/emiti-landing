@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMS Payment Reminders — Consent &amp; Opt-In Process — Emiti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #1a6b3c;
+      --green-light: #22854c;
+      --green-muted: #e8f4ee;
+      --white: #ffffff;
+      --gray-light: #f5f5f5;
+      --gray-mid: #e0e0e0;
+      --gray-text: #6b7280;
+      --dark: #111827;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-mid);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+    .logo img { height: 36px; width: auto; }
+    .logo-text { font-size: 1.4rem; font-weight: 800; color: var(--green); letter-spacing: -0.5px; }
+
+    nav { display: flex; align-items: center; gap: 1.5rem; }
+    nav a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+    nav a:hover { color: var(--green); }
+
+    .page-hero {
+      background: var(--gray-light);
+      padding: 3.5rem 1.5rem;
+      border-bottom: 1px solid var(--gray-mid);
+    }
+    .page-hero-inner { max-width: 800px; margin: 0 auto; }
+    .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.5px; }
+    .page-hero .sub { font-size: 1.05rem; color: var(--green); font-weight: 600; margin-top: 0.35rem; }
+    .page-hero p { font-size: 0.85rem; color: var(--gray-text); margin-top: 0.5rem; }
+
+    .content { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .content h2 { font-size: 1.15rem; font-weight: 700; margin: 2.5rem 0 0.75rem; color: var(--dark); }
+    .content h2:first-child { margin-top: 0; }
+    .content h3 { font-size: 1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; color: var(--dark); }
+    .content p { font-size: 0.95rem; color: #374151; margin-bottom: 0.75rem; }
+    .content ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 0.75rem; }
+    .content ul li { font-size: 0.95rem; color: #374151; margin-bottom: 0.4rem; }
+    .content ol { padding-left: 1.5rem; margin-bottom: 0.75rem; }
+    .content ol li { font-size: 0.95rem; color: #374151; margin-bottom: 0.55rem; }
+    .content a { color: var(--green); }
+
+    /* Highlighted exact opt-in wording */
+    .quote-box {
+      background: var(--green-muted);
+      border-left: 4px solid var(--green);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0 0.5rem;
+    }
+    .quote-box .lang { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--green); }
+    .quote-box p { font-size: 0.98rem; color: var(--dark); margin: 0.2rem 0 0.9rem; font-style: italic; }
+    .quote-box p:last-child { margin-bottom: 0; }
+
+    /* Key disclosures card */
+    .disclosures {
+      border: 1px solid var(--gray-mid);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+      background: #fafafa;
+    }
+    .disclosures dt { font-weight: 700; font-size: 0.9rem; margin-top: 0.8rem; color: var(--dark); }
+    .disclosures dt:first-child { margin-top: 0; }
+    .disclosures dd { font-size: 0.92rem; color: #374151; margin: 0.1rem 0 0; }
+
+    /* Screenshots */
+    .screenshots { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin: 1rem 0; }
+    .shot { border: 1px solid var(--gray-mid); border-radius: 10px; overflow: hidden; background: var(--gray-light); }
+    .shot img { width: 100%; height: auto; display: block; }
+    .shot .no-img { padding: 2.5rem 1rem; text-align: center; color: var(--gray-text); font-size: 0.85rem; }
+    .shot .cap { padding: 0.7rem 0.9rem; font-size: 0.82rem; color: #374151; border-top: 1px solid var(--gray-mid); background: var(--white); }
+
+    /* Sample messages */
+    .samples { list-style: none; padding: 0; margin: 1rem 0; }
+    .samples li {
+      border: 1px solid var(--gray-mid);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.92rem;
+      color: var(--dark);
+      background: var(--white);
+    }
+    .samples .en { display: block; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px dashed var(--gray-mid); color: var(--gray-text); font-size: 0.85rem; font-style: italic; }
+
+    footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 2.5rem 1.5rem; text-align: center; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-logo { font-size: 1.3rem; font-weight: 800; color: var(--white); margin-bottom: 1rem; }
+    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-bottom: 1rem; }
+    .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { font-size: 0.8rem; opacity: 0.5; }
+
+    @media (max-width: 640px) { nav { display: none; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="emiti-logo.png" alt="Emiti" onerror="this.style.display='none'" />
+      <span class="logo-text">Emiti</span>
+    </a>
+    <nav>
+      <a href="index.html#features">Features</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Emiti SMS Payment Reminders</h1>
+    <div class="sub">Consent &amp; Opt-In Process</div>
+    <p>This page documents, for carrier and A2P 10DLC (TCR) review, how end users consent to receive SMS from this messaging program. Last updated: July 7, 2026.</p>
+  </div>
+</div>
+
+<div class="content">
+
+  <h2>1. Program overview</h2>
+  <p>Emiti is an invoicing platform (SaaS) used by contractors and small businesses in Puerto Rico. Through Emiti, a business can send <strong>transactional payment reminders</strong> by SMS to <strong>its own clients</strong> about <strong>overdue invoices</strong>. Messages are sent via our messaging provider, <strong>Twilio</strong>.</p>
+  <p>This is <strong>not a marketing program</strong>. No promotional, advertising, or sales content is ever sent. Each message concerns a specific overdue invoice the recipient already received from the business.</p>
+
+  <h2>2. Who sends and who receives (B2B2C model)</h2>
+  <p>This is a standard <strong>on-behalf (B2B2C) model</strong> for a SaaS platform serving small businesses:</p>
+  <ul>
+    <li><strong>Sender:</strong> a small business or contractor that uses Emiti (the platform's user).</li>
+    <li><strong>Recipient:</strong> that business's own client — a person who already received an invoice from the business for services rendered.</li>
+    <li><strong>Emiti's role:</strong> the software platform that sends the SMS on the business's behalf, only for recipients whose consent the business has recorded.</li>
+  </ul>
+
+  <h2>3. How consent is obtained</h2>
+  <p>Consent is collected by the business directly from its own client, and confirmed inside the Emiti app before any reminder can be sent:</p>
+  <ol>
+    <li>The business obtains permission from its client <strong>directly</strong> (verbally or in writing at the time of service) to send SMS reminders about the client's invoices.</li>
+    <li>When saving the client's phone number, the business must check a <strong>mandatory, unchecked-by-default checkbox</strong> in the app expressly confirming that the client agreed to receive these SMS. The reminder cannot be enabled without it.</li>
+    <li>Each consent is recorded <strong>immutably</strong> with a timestamp, the account that granted it, and the method (stored in an append-only <code>sms_consents</code> ledger). Emiti only generates automated reminders for phone numbers that have this recorded consent.</li>
+  </ol>
+  <p>Because consent is captured in-app (behind the business's login), the exact wording, the mandatory checkbox, and screenshots of the consent screen are published below so a reviewer can verify the full opt-in experience.</p>
+
+  <h2>4. Exact opt-in wording (as shown in the app)</h2>
+  <p>The consent checkbox presented to the business reads exactly as follows. The app is in Spanish (the market is Puerto Rico); an English translation is provided for review:</p>
+  <div class="quote-box">
+    <div class="lang">Spanish (as shown in app)</div>
+    <p>“Este cliente autorizó recibir recordatorios por SMS sobre sus facturas. Al marcar, confirma que su cliente aceptó recibir estos mensajes.”</p>
+    <div class="lang">English (translation)</div>
+    <p>“This client authorized receiving SMS reminders about their invoices. By checking, you confirm your client agreed to receive these messages.”</p>
+  </div>
+
+  <h2>5. Screenshots of the consent screen</h2>
+  <p>The following screenshots show the mandatory consent checkbox within the client section of the invoice form in the Emiti app:</p>
+  <div class="screenshots">
+    <div class="shot">
+      <img src="images/sms-consent-checkbox.png" alt="Consent checkbox in the Emiti app" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+      <div class="no-img" style="display:none">[ screenshot: sms-consent-checkbox.png ]</div>
+      <div class="cap">The mandatory SMS consent checkbox, shown unchecked by default, in the client section of the invoice form.</div>
+    </div>
+    <div class="shot">
+      <img src="images/sms-consent-form.png" alt="Client form with consent checkbox in context" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+      <div class="no-img" style="display:none">[ screenshot: sms-consent-form.png ]</div>
+      <div class="cap">The full client form, showing the consent checkbox in context alongside the client's name and phone number.</div>
+    </div>
+  </div>
+
+  <h2>6. Message program details</h2>
+  <dl class="disclosures">
+    <dt>Program name</dt>
+    <dd>Emiti SMS Payment Reminders</dd>
+    <dt>Purpose</dt>
+    <dd>Transactional reminders about overdue invoices. Not marketing.</dd>
+    <dt>Message frequency</dt>
+    <dd>Up to 1 message per overdue invoice; frequency varies with each business's overdue invoices.</dd>
+    <dt>Rates</dt>
+    <dd>Message and data rates may apply.</dd>
+    <dt>Opt-out &amp; help</dt>
+    <dd>Recipients can reply <strong>STOP</strong> at any time to cancel (processed immediately), <strong>START</strong> to resume, or <strong>HELP</strong> for assistance.</dd>
+    <dt>No third-party sharing</dt>
+    <dd>Phone numbers are used <strong>only</strong> to send these transactional reminders. They are <strong>never shared or sold to third parties</strong> for marketing or any other purpose.</dd>
+  </dl>
+
+  <h2>7. Sample messages</h2>
+  <p>Actual messages are sent in Spanish. Variable content is shown in brackets <code>[ ]</code>. Two variants are sent: the full invoice total (pending), and the remaining balance (partial, when a deposit or partial payment was recorded).</p>
+  <ul class="samples">
+    <li>Hola [nombre del cliente], su factura [FP-0001] de [$250.00] con [nombre del negocio] está vencida. Ver: emiti-app.vercel.app/invoice/[id-factura]. Responde STOP para cancelar. Responde HELP para ayuda. Pueden aplicar tarifas de mensajes.
+      <span class="en">EN: Hi [client name], your invoice [FP-0001] for [$250.00] with [business name] is overdue. View: emiti-app.vercel.app/invoice/[invoice-id]. Reply STOP to cancel. Reply HELP for help. Message and data rates may apply.</span>
+    </li>
+    <li>Hola [nombre del cliente], su factura [FP-0002] con [nombre del negocio] tiene un balance pendiente de [$120.00]. Ver: emiti-app.vercel.app/invoice/[id-factura]. Responde STOP para cancelar. Responde HELP para ayuda. Pueden aplicar tarifas de mensajes.
+      <span class="en">EN: Hi [client name], your invoice [FP-0002] with [business name] has a remaining balance of [$120.00]. View: emiti-app.vercel.app/invoice/[invoice-id]. Reply STOP to cancel. Reply HELP for help. Message and data rates may apply.</span>
+    </li>
+    <li>Hola [nombre del cliente], su factura [FP-0034] de [$1,450.00] con [nombre del negocio] está vencida. Ver: emiti-app.vercel.app/invoice/[id-factura]. Responde STOP para cancelar. Responde HELP para ayuda. Pueden aplicar tarifas de mensajes.
+      <span class="en">EN: Hi [client name], your invoice [FP-0034] for [$1,450.00] with [business name] is overdue. View: emiti-app.vercel.app/invoice/[invoice-id]. Reply STOP to cancel. Reply HELP for help. Message and data rates may apply.</span>
+    </li>
+    <li>Hola [nombre del cliente], su factura [FP-0087] con [nombre del negocio] tiene un balance pendiente de [$75.50]. Ver: emiti-app.vercel.app/invoice/[id-factura]. Responde STOP para cancelar. Responde HELP para ayuda. Pueden aplicar tarifas de mensajes.
+      <span class="en">EN: Hi [client name], your invoice [FP-0087] with [business name] has a remaining balance of [$75.50]. View: emiti-app.vercel.app/invoice/[invoice-id]. Reply STOP to cancel. Reply HELP for help. Message and data rates may apply.</span>
+    </li>
+    <li>Hola [nombre del cliente], su factura [FP-0102] de [$500.00] con [nombre del negocio] está vencida. Ver: emiti-app.vercel.app/invoice/[id-factura]. Responde STOP para cancelar. Responde HELP para ayuda. Pueden aplicar tarifas de mensajes.
+      <span class="en">EN: Hi [client name], your invoice [FP-0102] for [$500.00] with [business name] is overdue. View: emiti-app.vercel.app/invoice/[invoice-id]. Reply STOP to cancel. Reply HELP for help. Message and data rates may apply.</span>
+    </li>
+  </ul>
+
+  <h2>8. Policies</h2>
+  <p>Full details on data handling and SMS consent are in our <a href="privacy-policy.html">Privacy Policy</a> (see Section 4, “Mensajes SMS y recordatorios de pago”) and <a href="terms.html">Terms of Service</a>. The Privacy Policy states that customer mobile numbers are never shared or sold to third parties for advertising.</p>
+  <p>Questions: <a href="mailto:evolutiomediapr@gmail.com">evolutiomediapr@gmail.com</a></p>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">emiti</div>
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="sms-consent.html">SMS Consent</a>
+      <a href="mailto:evolutiomediapr@gmail.com">evolutiomediapr@gmail.com</a>
+    </div>
+    <p class="footer-copy">© 2026 Emiti by Evolutio Media. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>
